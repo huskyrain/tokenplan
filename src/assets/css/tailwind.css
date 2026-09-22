@@ -1,0 +1,61 @@
+/* src/assets/css/tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------- 联想百应 Token Plan 全局视觉规范（真实采集） ------- */
+:root {
+  --brand-red: #FF4141;        /* 主红：激活/推荐/CTA */
+  --brand-orange: #FF5E0F;     /* 登录按钮橙 */
+  --btn-black: #1A1A1A;        /* 主按钮黑 */
+  --text-title: #333333;       /* 正文标题 */
+  --text-secondary: #999999;   /* 未选页签 */
+  --text-link: #666666;        /* 链接 */
+  --card-border: #D8D8D8;      /* 卡片边框 */
+  --section-gap: 96px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: PingFangSC, "PingFang SC", SourceHanSansSC, "Helvetica Neue", "Microsoft YaHei", sans-serif;
+  color: var(--text-title);
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* 区块标题装饰线：linear-gradient(270deg,#000,#FFF 76.24%) */
+.section-title-line {
+  display: inline-block;
+  width: 120px;
+  height: 1px;
+  vertical-align: middle;
+}
+.section-title-line.left {
+  background: linear-gradient(270deg, #000, #fff 76.24%);
+}
+.section-title-line.right {
+  background: linear-gradient(90deg, #000, #fff 76.24%);
+}
+
+/* 动画 */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(16px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
