@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Token Plan Prototype</title>
+  <script>
+    // GitHub Pages SPA redirect: preserve path for Vue Router
+    var path = window.location.pathname;
+    var search = window.location.search;
+    var hash = window.location.hash;
+    // Redirect to repo root with path as query param
+    var repo = window.location.pathname.split('/')[1]; // repo name
+    window.location.href = '/' + repo + '/?p=' + encodeURIComponent(path + search + hash);
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
